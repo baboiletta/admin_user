@@ -1,0 +1,26 @@
+<h1< THIS IS SECTION PAGES! </h1>
+<table class="tabl">
+        <tr>
+            <th> STT </th>
+            <th> Name </th>
+            <th> Visible </th>
+            <th> Page ID </th>
+            <th> Action </th>
+
+        </tr>
+        <% @section.each_with_index do |s, index|%>
+            <tr>
+                <td> <%= index + 1 %> </td>
+                <td> <%=s.name %> </td>
+                <td> <%= status_tag(s.visible) %> </td>
+                <td> <%=s.page_id  %> </td>
+                <td>
+               <%=link_to("Show", section_path(s)) %>
+               <%=link_to("Edit", edit_section_path(s)) %>
+               <%=link_to("Delete", section_path(s), method: "delete") %>
+                
+                </td>
+            </tr>
+        <%end%>
+</table>
+<%=link_to("New Section", new_section_path) %>

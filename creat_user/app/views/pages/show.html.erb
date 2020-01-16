@@ -1,0 +1,19 @@
+<h1> Showwwwwww </h1>
+    <h2> <%= @page.name %>
+    <table>
+        <tr> 
+            <th> STT </th>
+            <td> <%= @page.position %> </td>
+        </tr>
+        <tr> 
+            <th> name </th>
+            <td><%=  @page.name %> </td>
+        </tr>
+        <tr> 
+            <th> Visible </th>
+            <td><%= @page.visible ? "Yes" : "No" %> </td>
+        </tr>
+        
+    </table>
+
+<%=link_to("Back to List", pages_path) %>

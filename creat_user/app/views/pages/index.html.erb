@@ -1,0 +1,31 @@
+<h1 class="a"> Pages </h1>
+<table class="tabl"> 
+    <tr>
+        <th> STT </th>
+        <th> Name </th>
+        <th> Visible </th>
+        <th> Permalink</th>
+        <th> Subject ID </th>
+        <th> Actions </th>
+
+    </tr>
+    
+   
+    <% @page.each do |page| %>
+        <tr> 
+            <td> <%= page.position%> </td>
+            <td> <%= page.name%> </td>
+            <td> <%= status_tag(page.visible) %></td>
+            <td> <%= page.permalink%> </td>
+            <td> <%= page. subject_id%> </td>
+            <td> 
+                <%= link_to"", page_path(page), class: "fas fa-eye" %>
+                <%= link_to( "", edit_page_path(page), class: "fas fa-pen") %>
+                <%= link_to( "", page_path(page), method: 'delete',  class: "fas fa-trash-alt") %>
+            </td>
+        </tr>
+    <% end %>
+
+ 
+</table>
+<%=link_to("New Page", new_page_path) %>

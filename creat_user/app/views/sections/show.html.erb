@@ -1,0 +1,22 @@
+<h1> This is <%=@section.name=%> </h1>
+  <table> 
+    <tr>
+        <th> Name</th>
+        <td> <%=@section.name=%></td>
+    </tr>
+    <tr>
+    <th> Visible</th>
+    <td> <%= @section.visible%> </td>
+</tr>
+<tr>
+        <th> Page ID</th>
+        <td>  <%= @section.page_id%> </td>
+    </tr>
+      
+    </table>
+
+  <%=link_to("Back to List", sections_path) %>
+    
+
+  
+  

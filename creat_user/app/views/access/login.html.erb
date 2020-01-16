@@ -1,0 +1,10 @@
+<div class="col-sm-6 offset-sm-3">
+    <h1 class="display-4 text-center"> LogIn</h1>
+    <%= form_tag(access_attempt_login_path, method: :post, class: "form-group") do %>
+    <%= label_tag(:username     )%>
+    <%= text_field_tag(:user_name, params[:user_name], class: "form-control") %> </br>
+    <%= label_tag(:password ) %>
+    <%= password_field_tag(:password, "",class: "form-control") %></br>
+    <%= submit_tag("Log In"  ) %>
+<%end%>
+</div>

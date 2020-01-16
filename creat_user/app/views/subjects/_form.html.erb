@@ -1,0 +1,18 @@
+    <!-- <%  p f.object.errors %> -->
+
+    <%- p f.object.errors%>
+    <%= f.label :position%>
+    <%= f.text_field(:position)%></br>
+    <%= content_tag(:span, f.object.errors.messages[:position].first, class: "error num")%>
+   
+    <%= f.label :name %>
+    <%= f.text_field(:name)%></br>
+    
+        <%= content_tag(:span, f.object.errors.messages[:name].first, class: ["error","name"])%>
+    
+    <%= f.label :visible %>
+    <%= f.check_box(:visible)%>
+  
+       
+    
+       

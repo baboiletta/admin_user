@@ -1,0 +1,59 @@
+
+// mau 
+$tim : #c8afaf;
+
+$den :#1c0f0f;
+// font
+$roboto :'Roboto', sans-serif;
+
+
+
+
+     body{
+        font-family: $roboto;
+        color: $den;
+        font-size: 15px;
+    }
+
+  .tabl {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+        
+        tr{
+            &.row {
+                background: #c8afaf;
+            }
+        
+        &:hover {
+            background: #c8afaf;}}
+        & th,td{
+            border: 1px solid black;
+            text-align: center;
+            padding: 25px 0;
+            margin: 0;
+        }   
+        & .link {
+            color: $den;
+            padding: 0 10px;
+    
+            text-decoration: none;
+            &:hover{ color: green;}
+        }
+
+}
+
+    
+    
+    span.status{ display: block; width: 15px; height: 15px;margin-left: 45%; padding: 0; border: 1px solid #000000; text-align: center; 
+        &.true{ background: green; color: green;}
+        &.false{ background: red; color: red;}
+    }
+   
+    .fas {
+
+        text-decoration: none;
+    
+    }

@@ -1,0 +1,9 @@
+<%= p.label :position %>
+<%= p.text_field(:position)%></br>
+<%= p.label :name %>
+<%= p.text_field(:name)%></br>
+<%= p.label :visible %>
+<%= p.text_field(:visible)%></br>
+<%= p.label :permalink %>
+<%= p.text_field(:permalink)%></br>
+<%= p.select :subject_id, options_for_select(@subject)%></br>

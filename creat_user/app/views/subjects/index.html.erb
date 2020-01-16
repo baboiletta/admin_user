@@ -1,0 +1,39 @@
+<% @page_tilte = "All Subject"%>
+<div>
+
+        <h1>Subjects</h1>
+        <%=link_to("Add New Subject", new_subject_path) %>
+
+        <%= form_tag @subject, method: :get do %>
+        <%= text_field_tag :name %>
+        <%= submit_tag 'Search' %>
+        <% end %>
+
+
+        <table class="tabl">
+        
+
+            <tr>
+                <th> STT </th>
+                <th> Name </th>
+                <th> Visible </th>
+                <th> Actions </th>
+            </tr>
+        <% @subjects.each_with_index do |s, index|%>
+            <tr>
+                <td> <%=index + 1 %></td>
+                <td> <%=s.name%> </td>
+                <td> <%=status_tag(s.visible)%></td>
+            
+                <td> 
+                    <%= link_to "", subject_path(s), class: "fas fa-eye"%>
+                    <%=link_to("", edit_subject_path(s), class: "fas fa-pen") %>
+                    <%=link_to "", subject_path(s.id), data:{confirm: 'Are you sure?', method: :delete}, class: "fas fa-trash" %>
+                </td>
+
+            </tr>
+        <%end%>
+        </table>
+
+
+</div>

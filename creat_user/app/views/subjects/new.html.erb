@@ -1,0 +1,11 @@
+<%=link_to "Back to List", subjects_path %>
+<div>
+    <h1> Subject New</h1>
+    <%= form_for @subject, class: "edit_form" do |f|%>
+       <%= render partial: "form", locals: {f: f} %>
+        <div>   
+            <%=f.submit("Create Subject")%>
+        </div>
+        <%end%>
+</div>
+

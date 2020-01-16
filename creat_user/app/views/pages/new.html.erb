@@ -1,0 +1,8 @@
+<h1 class="a">NEW PAGE </h1>
+    <%= form_for(@page) do |p|%>
+        <%= render partial: "form", locals: {p: p}%>
+        <%= p.submit("Create Subject")%>
+              
+    <%end%>
+
+<%= link_to "Back", pages_path%>

@@ -1,0 +1,40 @@
+*{}
+.error{
+
+
+    text-transform: capitalize;
+    color:  red;
+    font-style: italic;
+    font-size: 12px;
+    position: absolute;
+    margin-top: -22px;
+    margin-left: 29px;
+    &.name{
+
+        margin-left: 18%;
+        margin-top: -40px;
+        padding: 0 10px;}
+    &.num{
+        margin-left: 18%;
+        margin-top: -40px;
+        padding-left: 10px;
+    }
+    
+    
+
+}
+label {
+
+    font-size: 18px;
+    float: left;
+    margin: 4px 4px;
+        margin-top: 4px;
+        margin-right: 4px;
+        margin-bottom: 4px;
+        margin-left: 4px;
+    width: 90px;
+
+}
+input {
+    margin: 2px;
+}
